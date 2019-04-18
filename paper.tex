@@ -138,6 +138,13 @@ neuroimaging Spark applications on HPC systems.
 
 
 \section{Materials and Methods}\label{sec:methods}
+    SPA consists of a Python-based driver with bash-templates that are called 
+    using the Slurmpy~\cite{slurmpy} library. In order to commence pilot-scheduling,
+    the user must supply the bash template of choice and a JSON configuration 
+    file which contains details on pilot node requirements and the desired application
+    to be launched. Currently, there only exists a single pilot template for launching
+    Spark jobs on a Slurm-based HPC cluster. The pseudocode for that template can 
+    be seen in ~\ref{Figure:pilot-temp}.
     \todo{walltime parameter of workflow}
     \subsection{Added value of pilot scheduling}
         \todo{execution of a batch cluster vs dynamic (pilot) cluster}
